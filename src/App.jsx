@@ -8,6 +8,7 @@ import Layout from './pages/layout/Layout'
 import Return from './pages/return/Return'
 import Garant from './pages/garant/Garant'
 import Shipping from './pages/shipping/Shipping'
+import NotFound from './pages/not-found/NotFound'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path='/garant' element={<Garant/>}/>
         <Route path='/shipping' element={<Shipping/>}/>
       </Route>
-      <Route path='*' element={<p>idi nahui</p>}/>
+      <Route path='*' element={<NotFound/>}/>
     </Routes>
     </>
   )
