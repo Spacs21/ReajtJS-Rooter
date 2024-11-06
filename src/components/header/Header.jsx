@@ -16,7 +16,7 @@ const Header = () => {
                 <NavLink to={"shipping"}>Доставка и оплата</NavLink>
                 <NavLink to={"return"}>Возврат</NavLink>
                 <NavLink to={"garant"}>Гарантии</NavLink>
-                <NavLink>Контакты</NavLink>
+                <NavLink to={"contact"}>Контакты</NavLink>
                 <NavLink>Блог</NavLink>
               </div>
               <div className="right">
