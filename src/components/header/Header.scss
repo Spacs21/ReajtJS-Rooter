@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     background-color: #fff;
-    padding: 10px 20px;
+    padding: 0 20px;
   
     &__top-links {
         display: flex;
@@ -14,8 +14,14 @@
         gap: 15px;
         font-size: 0.85rem;
         color: #666;
+        @media(max-width:768px){
+          display: none;
+        }
       }
       .right{
+        @media(max-width:768px){
+          display: none;
+        }
         span{
             color: #454545;
             font-weight: 600;
@@ -43,10 +49,26 @@
     }
   
     &__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .menu{
+        display: none;
+        font-size: 30px;
+        @media(max-width:768px){
+          display: flex;
+        }
+      }
         a{
             color: black;
             text-decoration: none;
             list-style: none;   
+            @media(max-width: 583px){
+              font-size: 13px;
+            }
+            @media(max-width: 433px){
+              font-size: 10px;
+            }
         }
     }
   
@@ -59,7 +81,8 @@
         height: 50px;
         background: #454545;
         color: #fff;
-        padding: 8px 12px;
+        padding: 8px 20px;
+        margin-left: 10px;
         width: 153px;
         border-radius: 100px;
         text-align: center;
@@ -68,6 +91,9 @@
         transition: 0.3s ease;
         &:hover{
           background: #666;
+        }
+        @media(max-width:900px){
+          display: none;
         }
   
         .catalog-icon {
@@ -84,6 +110,9 @@
       max-width: 626px;
       height: 50px;
       margin: 0 20px;
+      @media(max-width:583px){
+        display: none;
+      }
   
       input {
         width: 100%;
@@ -106,6 +135,11 @@
     &__icons {
       display: flex;
       gap: 20px;
+      .icon-wrapper.special{
+        @media(max-width:700px){
+          display: none;
+        }
+      }
   
       .icon-wrapper {
         display: flex;
@@ -115,7 +149,12 @@
         font-size: 0.8rem;
         position: relative;
         cursor: pointer;
-  
+        @media(max-width: 583px){
+          font-size: 0.6rem;
+        }
+        @media(max-width: 433px){
+          font-size: 0.5rem;
+        }
         .icon {
           font-size: 1.5rem;
         }
@@ -157,16 +196,19 @@
         }
       }
     }
-  
-    @media (max-width: 1024px) {
-      .header__main {
-        flex-direction: column;
-        align-items: center;
-  
-        &__search {
-          margin: 10px 0;
-        }
-      }
-    }
   }
-  
+.header__search.media{
+  display: none;
+  margin: 5px 0;
+  @media(max-width: 583px){
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    outline: none;
+  }
+}

@@ -6,6 +6,7 @@ import image3 from "../../assets/image3.png"
 import image4 from "../../assets/image4.png"
 import image5 from "../../assets/image5.png"
 import image6 from "../../assets/image6.png"
+import { memo } from 'react';
 
 const Catalog = () => {
   return (
@@ -65,9 +66,10 @@ const Catalog = () => {
             <img src={image6} className="catalog-item__image" />
           </div>
         </div>
+        <button className="catalog__button new">Весь каталог →</button>
       </div>
     </div>
   );
 };
 
-export default Catalog;
+export default memo(Catalog);

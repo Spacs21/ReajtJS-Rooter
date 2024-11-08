@@ -1,6 +1,9 @@
 import React from "react";
 import "./About.scss";
 import { NavLink } from "react-router-dom";
+import Brands from "../../components/brands/Brands";
+import Blog from "../../components/blog/Blog";
+import { memo } from "react";
 
 const About = () => {
   return (
@@ -48,9 +51,15 @@ const About = () => {
             </p>
           </div>
         </div>
+        <Brands/>
+        <div className="blog__title">
+          <div><h2>Блог</h2></div>
+          <div><button>Перейти в блог</button></div>
+        </div>
+        <Blog/>
       </div>
     </div>
   );
 };
 
-export default About;
+export default memo(About);

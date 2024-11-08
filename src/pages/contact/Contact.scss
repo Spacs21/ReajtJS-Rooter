@@ -1,4 +1,7 @@
 article{
+  .container.map{
+    max-width: 1700px;
+  }
     .return{
         display: flex;
         justify-content: space-between;
@@ -41,11 +44,9 @@ article{
     }
   
     ul {
-    //   padding-left: 20px;
       margin: 0 0;
   
       li {
-        // margin-bottom: 8px;
         color: blue;
       }
     }

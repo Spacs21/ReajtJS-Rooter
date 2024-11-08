@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 import "./Home.scss"
 import light from "../../assets/light.png"
 import Catalog from '../../components/catalog/Catalog';
+import { memo } from 'react';
 
 const Home = () => {
   return (
@@ -15,18 +16,18 @@ const Home = () => {
         <div className="slider">
           <Swiper
           cssMode={true}
-          navigation={true}
+          navigation={false}
           pagination={true}
           mousewheel={true}
           keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          autoplay={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
           className="custom-swiper"
         >
           <SwiperSlide>
             <div className="swiper">
               <div className="text__content">
-                <h1>Скидка 15% на все подвесные светильники</h1>
-                <h1 className='date'>до 5 февраля</h1>
+                <h1>Скидка 15% на все подвесные светильники <span>до 5 февраля</span></h1>
               </div>
               <div className="image">
                 <img src={light}/>
@@ -36,8 +37,7 @@ const Home = () => {
           <SwiperSlide>
             <div className="swiper">
               <div className="text__content">
-                <h1>Скидка 15% на все подвесные светильники</h1>
-                <h1 className='date'>до 5 февраля</h1>
+                <h1>Скидка 15% на все подвесные светильники <span>до 5 февраля</span></h1>
               </div>
               <div className="image">
                 <img src={light}/>
@@ -52,4 +52,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default memo(Home)

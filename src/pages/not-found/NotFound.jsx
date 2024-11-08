@@ -3,6 +3,7 @@ import Header from '../../components/header/Header'
 import error from "../../assets/404.png"
 import "./NotFound.scss"
 import { NavLink } from 'react-router-dom'
+import { memo } from 'react';
 
 const NotFound = () => {
   return (
@@ -19,4 +20,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default memo(NotFound)

@@ -2,6 +2,7 @@ import React from 'react'
 import "./Return.scss"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link, NavLink } from 'react-router-dom';
+import { memo } from 'react';
 
 
 const Return = () => {
@@ -53,4 +54,4 @@ const Return = () => {
   )
 }
 
-export default Return
+export default memo(Return)

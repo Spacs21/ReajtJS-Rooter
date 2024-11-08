@@ -2,6 +2,7 @@ import React from 'react'
 import "./Garant.scss"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link, NavLink } from 'react-router-dom';
+import { memo } from 'react';
 
 
 const Garant = () => {
@@ -33,4 +34,4 @@ const Garant = () => {
   )
 }
 
-export default Garant
+export default memo(Garant)
