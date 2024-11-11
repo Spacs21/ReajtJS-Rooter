@@ -1,0 +1,123 @@
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    @media(max-width: 1286px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width: 596px){
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+    
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        color: #454545;
+        width: 300px;
+        height: auto;
+        @media(max-width: 1286px){
+            width: 100%;
+        }
+        @media(max-width: 500px){
+            width: 90%;
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 15px;
+            h3{
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 22px;
+                width: 250px;
+                @media(max-width: 600px){
+                    font-size: 17px;
+                }
+            }
+
+            .price{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .discount{
+                    color: #9F9F9F;
+                    font-size: 12px;
+                    font-weight: 500;
+                    text-decoration: line-through;
+                    position: absolute;
+                    bottom: 25px;
+                }
+                p{  
+                    font-weight: 700;
+                    font-size: 20px;
+                    @media(max-width: 600px){
+                        font-size: 17px;
+                    }
+                }
+                .amount{
+                    display: flex;
+                    flex-direction: column;
+                }
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 55px;
+                    height: 33px;
+                    color: white;
+                    border-radius: 100px;
+                    background: #454545;
+                    border: 1px solid #454545;
+                    font-size: 17px;
+                    text-align: center;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                    @media(max-width: 600px){
+                        font-size: 15px;
+                        width: 40px;
+                        height: 25px;
+                    }
+                    &:hover{
+                        background: #45454500;
+                        color: #454545;
+                    }
+                }
+            }
+        }
+        &__image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: auto;;
+            margin-bottom: 10px;
+            cursor: pointer;
+            .icon{
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 30px;
+                cursor: pointer;
+                @media(max-width: 600px){
+                    font-size: 17px;
+                }
+            }
+            img{
+                height: 216px;
+                object-fit: contain;
+                transition: 0.4s ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                @media(max-width:596px){
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

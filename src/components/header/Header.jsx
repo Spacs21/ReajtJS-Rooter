@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { FaBars, FaSearch, FaHeart, FaChartBar, FaShoppingCart } from 'react-icons/fa';
 import "./Header.scss"
 import { AiOutlineHeart, AiOutlineBarChart } from 'react-icons/ai';
@@ -16,12 +16,12 @@ const Header = () => {
     setVisible(prev => !prev)
   }, [])
 
+
   return (
     <div className="holder">
       <div className="container">
           <header className="header">
             <div className="header__top-links">
-              {isVisible && <Menu/>}
               <div className="left">
                 <NavLink to={"about"}>О компании</NavLink>
                 <NavLink to={"shipping"}>Доставка и оплата</NavLink>
@@ -74,6 +74,9 @@ const Header = () => {
                 </div>
               </div>
             </div>
+            <div className="menu__wrapper">
+                {isVisible && <Menu  setVisible={setVisible}/>}
+              </div>
 
             <div className="header__search media">
                 <input type="text" placeholder="Поиск по товарам" />

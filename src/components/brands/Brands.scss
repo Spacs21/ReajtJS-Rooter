@@ -5,6 +5,9 @@
             h1{
                 font-size: 35px;
                 color: #454545;
+                @media(max-width:700px){
+                    font-size: 24px;
+                }
             }
         }
         .boxes{

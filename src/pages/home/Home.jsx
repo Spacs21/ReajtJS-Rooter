@@ -8,6 +8,11 @@ import "./Home.scss"
 import light from "../../assets/light.png"
 import Catalog from '../../components/catalog/Catalog';
 import { memo } from 'react';
+import Features from '../../components/features/Features';
+import Products from '../../components/products/Products';
+import Brands from '../../components/brands/Brands';
+import Blog from '../../components/blog/Blog';
+import Title from '../../components/title/Title';
 
 const Home = () => {
   return (
@@ -48,6 +53,13 @@ const Home = () => {
         </div>
       </div>
       <Catalog/>
+      <Features/>
+      <Products/>
+      <Brands/>
+      <div className="container">
+        <Title title="Блог" text="Перейти в блог"/>
+        <Blog/>
+      </div>
     </div>
   )
 }

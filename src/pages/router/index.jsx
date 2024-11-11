@@ -10,6 +10,7 @@ import Shipping from '../shipping/Shipping'
 import NotFound from '../not-found/NotFound'
 import Blogs from '../blogs/Blogs'
 import { memo } from 'react';
+import Detail from '../detail/Detail'
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
         <Route path='/garant' element={<Garant/>}/>
         <Route path='/shipping' element={<Shipping/>}/>
         <Route path='/blog' element={<Blogs/>}/>
+        <Route path='/product/:id' element={<Detail/>}/>
         </Route>
         <Route path='*' element={<NotFound/>}/>
   </Routes>

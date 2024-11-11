@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
 .content{
-    margin: 50px;
     .container.new{
         max-width: 1500px;
+        padding: 0 20px;
     }
 }
 .custom-swiper{
@@ -10,14 +10,11 @@
     height: 500px;
     border-radius: 50px;
     background: #F2F2F2;
-    padding: 0 100px;
-    @media(max-width:1200px){
-        padding: 0 40px;
-    }
     .swiper{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 20px;
         @media(max-width:900px){
             flex-direction: column-reverse;
         }
@@ -39,28 +36,21 @@
                 @media(max-width:900px){
                     min-width: 257px;
                     line-height: 38.25px;
-                    font-size: 28px;
+                    font-size: 40px;
                     font-weight: 700;
                 }
-                @media(max-width:481px){
+                @media(max-width:600px){
                     min-width: 100%;
-                    font-size: 20px;
-                }
-                @media(max-width:392px){
-                    line-height: 30px;
-                    min-width: 100%;
-                    font-size: 16px;
+                    font-size: 23px;
                 }
                 span{
+                    display: inline-block;
                     background: #454545;
                     color: white;
-                    padding: 0 20px;
+                    padding: 10px 20px;
                     border-radius: 100px;
-                    @media(max-width:563px){
-                        display: inline-block;
-                    }
-                    @media(max-width:481px) {
-                        display: inline-block;
+                    @media(max-width:450px){
+                        padding: 5px 10px;
                     }
                 }
             }

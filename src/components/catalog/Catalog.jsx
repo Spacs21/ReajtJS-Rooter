@@ -7,15 +7,13 @@ import image4 from "../../assets/image4.png"
 import image5 from "../../assets/image5.png"
 import image6 from "../../assets/image6.png"
 import { memo } from 'react';
+import Title from '../title/Title';
 
 const Catalog = () => {
   return (
     <div className="container">
       <div className="catalog">
-        <h2 className="catalog__title">
-            <h2>Каталог</h2>
-            <button className="catalog__button">Весь каталог →</button>
-        </h2>
+        <Title title="Каталог" text="Весь каталог →"/>
         <div className="catalog__grid">
           <div className="catalog-item">
             <div className="catalog-item__content">

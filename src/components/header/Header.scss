@@ -3,7 +3,6 @@
     flex-direction: column;
     width: 100%;
     background-color: #fff;
-    padding: 0 20px;
   
     &__top-links {
         display: flex;
@@ -211,4 +210,7 @@
     border-radius: 100px;
     outline: none;
   }
+}
+.no-scroll{
+  overflow: hidden;
 }

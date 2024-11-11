@@ -1,76 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
-
-body {
-    font-family: 'Manrope', sans-serif;
-}
-
-.menu-holder{
-    .menu-show{
+.menu-holder {
+    .color {
+      background: #4545457c;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      left: 0;
+      z-index: 2;
+    }
+  
+    .menu-show {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 500px;
+      background: #ffffff;
+      z-index: 2;
+      overflow: hidden;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+      animation: fadeIn 0.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+  
+      &.open {
+        transform: scaleY(1);
+        animation: fadeIn 0.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards;
+      }
+  
+      @media (min-width: 768px) {
+        display: none;
+      }
+  
+      a {
+        width: 100%;
+        border: 0.1px solid #45454528;
+        border-right: none;
+        border-left: none;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        color: #454545b0;
+        font-family: 'Manrope', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0;
+        animation: linkFadeIn 0.4s ease forwards;
+        animation-delay: 0.3s;
+  
+        &:nth-child(2) {
+          animation-delay: 0.4s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.6s;
+        }
+        &:nth-child(4) {
+          animation-delay: 0.7s;
+        }
+        &:nth-child(5) {
+          animation-delay: 0.8s;
+        }
+        &:nth-child(6) {
+          animation-delay: 1s;
+        }
+      }
+  
+      &__button {
+        width: 90%;
+        height: 55px;
+        background: #454545;
+        border: 1px solid #454545;
+        font-family: Manrope;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21.86px;
+        color: #FFFFFF;
+        border-radius: 100px;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+  
+        &:hover {
+          background: #45454500;
+          color: #454545;
+        }
+      }
+  
+      .menu__contact {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        height: 500px;
-        background: #fffffff3;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 70px;
-        z-index: 2;
-        opacity: 0;
-        animation: fadeIn 0.2s ease-in forwards;
-        
-        a{
-            width: 100%;
-            border: 0.1px solid #45454528;
-            border-right: none;
-            border-left: none;
-            text-align: center;
-            padding: 15px;
-            text-decoration: none;
-            color: #454545b0;
-            font-family: 'Manrope', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
+        margin-top: 20px;
+        font-size: 18px;
+  
+        a {
+          border: none;
         }
-        
-        &__button{
-            width: 90%;
-            height: 55px;
-            background: #454545;
-            border: 1px solid #454545;
-            font-family: Manrope;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 21.86px;
-            color: #FFFFFF;
-            border-radius: 100px;
-            margin-top: 15px;
-            cursor: pointer;
-            transition: 0.3s ease;
-            &:hover{
-                background: #45454500;
-                color: #454545;
-            }
-        }
-        
-        .menu__contact{
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            font-size: 18px;
-            a{
-                border: none;
-            }
-        }
+      }
     }
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     0% {
-        opacity: 0;
+      transform: scaleY(0);
     }
     100% {
-        opacity: 1;
+      transform: scaleY(1);
     }
-}
+  }
+  
+  @keyframes linkFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
