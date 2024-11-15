@@ -12,7 +12,7 @@ const Wishlist = () => {
       {
         stateChecker === 0 ?
         <div className='favorite'>
-          <img src="https://uzum.uz/static/img/hearts.cf414be.png"/>
+          <img src="https://cdni.iconscout.com/illustration/premium/thumb/payment-failed-illustration-download-in-svg-png-gif-file-formats--card-cancel-cash-pay-limerror-pack-design-development-illustrations-2815870.png?f=webp"/>
           <h2>Добавьте то, что понравилось</h2>
           <p>Нажмите на ♡ в товаре. Войдите в аккаунт и всё избранное сохранится</p>
           <NavLink to={"/"}><button>Главная</button></NavLink>
