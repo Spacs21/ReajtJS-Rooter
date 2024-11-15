@@ -1,0 +1,32 @@
+.favorite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    h2{
+        font-size: 40px;
+    }
+    button{
+        cursor: pointer;
+        background: none;
+        border: 1px solid #454545;
+        background: #454545;
+        color: white;
+        padding: 0.8rem 3rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 12px;
+        transition: background 0.3s, color 0.3s;
+
+        &:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: #454545;
+        }
+
+        @media (max-width: 768px) {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        }
+    }
+}

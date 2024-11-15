@@ -13,8 +13,10 @@ import Products from '../../components/products/Products';
 import Brands from '../../components/brands/Brands';
 import Blog from '../../components/blog/Blog';
 import Title from '../../components/title/Title';
+import { useFetch } from '../../hooks/useFetch'
 
 const Home = () => {
+  const {data} = useFetch("products")
   return (
     <div className='content'>
       <div className="container new">
@@ -54,7 +56,7 @@ const Home = () => {
       </div>
       <Catalog/>
       <Features/>
-      <Products/>
+      <Products data={data} text="Популярные товары"/>
       <Brands/>
       <div className="container">
         <Title title="Блог" text="Перейти в блог"/>

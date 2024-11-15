@@ -11,6 +11,7 @@ import NotFound from '../not-found/NotFound'
 import Blogs from '../blogs/Blogs'
 import { memo } from 'react';
 import Detail from '../detail/Detail'
+import Wishlist from '../Wishlist/wishlist'
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path='/shipping' element={<Shipping/>}/>
         <Route path='/blog' element={<Blogs/>}/>
         <Route path='/product/:id' element={<Detail/>}/>
+        <Route path='/wishlist' element={<Wishlist/>}/>
         </Route>
         <Route path='*' element={<NotFound/>}/>
   </Routes>

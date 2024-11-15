@@ -1,0 +1,74 @@
+[
+    {
+      "title": "iPhone 12 Pro Max",
+      "descp": "Мощная производительность благодаря чипу A14 Bionic и продвинутая система камер с тремя объективами для высококачественных фотографий и видео. Отличный выбор для тех, кто ищет производительность флагмана и широкие возможности для съемки.",
+      "price": "$1099",
+      "inStock": "Да",
+      "image": "https://olcha.uz/image/700x700/products/2020-11-27/apple-iphone-12-pro-max-128gb-gold-19572-0.jpeg",
+      "category": "executive",
+      "id": "1"
+    },
+    {
+      "title": "iPhone 13 Mini",
+      "descp": "Компактный и удобный для использования одной рукой iPhone с мощным чипом A15 Bionic, который обеспечивает отличную производительность и энергоэффективность. Маленький размер, но большие возможности, включая ночной режим камеры и продвинутые функции съемки.",
+      "price": "$699",
+      "inStock": "Да",
+      "image": "https://iplanet.one/cdn/shop/files/iPhone_13_Pink_PDP_Image_Position-1A__GBEN.jpg?v=1691169862&width=823",
+      "category": "compact",
+      "id": "2"
+    },
+    {
+      "title": "iPhone 14 Pro",
+      "descp": "Новый дизайн с функцией Dynamic Island, который превращает переднюю камеру и датчики в интерактивную область. Дисплей с технологией ProMotion обеспечивает плавное скроллирование и яркие визуальные эффекты, а камера обеспечивает невероятное качество фото и видео.",
+      "price": "$999",
+      "inStock": "Нет",
+      "image": "https://www.imagineonline.store/cdn/shop/files/iPhone_14_Pro_Space_Black_PDP_Image_Position-1a__WWEN_grande.jpg?v=1692349757",
+      "category": "executive",
+      "id": "3"
+    },
+    {
+      "title": "iPhone 11",
+      "descp": "С чипом A13 Bionic и системой с двумя камерами, iPhone 11 обеспечивает высокую производительность и отличное качество съемки. Идеально подходит для тех, кто ищет надежный телефон с хорошей камерой и длительным временем работы от батареи.",
+      "price": "$499",
+      "inStock": "Да",
+      "image": "https://alephksa.com/cdn/shop/files/iPhone_11_W_2.jpg?v=1691067070",
+      "category": "standard",
+      "id": "4"
+    },
+    {
+      "title": "iPhone SE (2022)",
+      "descp": "Доступный iPhone с мощным чипом A15 Bionic, который обеспечивает отличную производительность и поддержку новейших приложений. Компактный дизайн, классический внешний вид и функции, подходящие для повседневного использования.",
+      "price": "$429",
+      "inStock": "Да",
+      "image": "https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-se-2022-red.png?v=ba84c3f1",
+      "category": "budget",
+      "id": "5"
+    },
+    {
+      "title": "iPhone XR",
+      "descp": "Доступный вариант с дисплеем Liquid Retina, который обеспечивает яркие и четкие изображения. Поддержка Face ID и множество возможностей, включая поддержку новейших iOS обновлений.",
+      "price": "$399",
+      "inStock": "Нет",
+      "image": "https://wefix.co.za/cdn/shop/products/iPhone-XR-Black_9450f19b-803f-432d-8c43-2c312dd9ea50.png?v=1701412353",
+      "category": "standard",
+      "id": "6"
+    },
+    {
+      "title": "iPhone 13 Pro Max",
+      "descp": "Впечатляющий дисплей и длительное время работы от батареи делают iPhone 13 Pro Max идеальным выбором для пользователей, которым нужна высочайшая производительность и автономность. Камера Pro позволяет делать профессиональные фото и видео.",
+      "price": "$1099",
+      "inStock": "Да",
+      "image": "https://compasia.com.ph/cdn/shop/files/iphone-13-pro-max-328530.png?v=1717653202",
+      "category": "executive",
+      "id": "7"
+    },
+    {
+      "title": "iPhone 12",
+      "descp": "Новый дизайн с Ceramic Shield и поддержкой 5G, обеспечивающий высокую скорость соединения и защиту от повреждений. iPhone 12 предлагает отличное качество съемки и удобство использования.",
+      "price": "$799",
+      "inStock": "Да",
+      "image": "https://compasia.com.ph/cdn/shop/files/iphone-12-pro-max-930746.png?v=1717901657",
+      "category": "standard",
+      "id": "8"
+    }
+  ]

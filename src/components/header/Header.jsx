@@ -60,7 +60,7 @@ const Header = () => {
 
               <div className="header__icons">
                 <div className="icon-wrapper">
-                  <AiOutlineHeart className="icon" />
+                  <NavLink to={"/wishlist"}><AiOutlineHeart className="icon" /></NavLink>
                   <span>Избранное</span>
                 </div>
                 <div className="icon-wrapper special">
@@ -75,7 +75,7 @@ const Header = () => {
               </div>
             </div>
             <div className="menu__wrapper">
-                {isVisible && <Menu  setVisible={setVisible}/>}
+                {isVisible && <Menu  setVisible={setVisible} isVisible={isVisible}/>}
               </div>
 
             <div className="header__search media">

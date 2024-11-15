@@ -9,6 +9,7 @@ import Loader from "../loader/Loader";
 const Product = () => {
     const {id} = useParams()
     const {data, loading, error} = useFetch(`/products/${id}`)
+    
     if (!data) return <Loader/>;
     
   return (

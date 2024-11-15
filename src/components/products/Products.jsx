@@ -7,31 +7,33 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import "./Products.scss"
 import Title from '../title/Title'
 import { FaCartShopping } from "react-icons/fa6";
-import { CiHeart } from "react-icons/ci";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import img1 from "../../assets/lamps.png"
 import axios from '../../api';
 import { useFetch } from '../../hooks/useFetch';
 import { NavLink } from 'react-router-dom';
 import Model from '../model/Model';
+import { useStateValue } from '../../context';
+import Loader from '../loader/Loader';
 
 
-const Products = () => {
-    const progressCircle = useRef(null);
-    const progressContent = useRef(null);
+const Products = ({data, loading, error, text}) => {
     const [ModelContent, SetModelContent] = useState(null)
-    // const [isModelShow, setModelShow] = useState()
+    const [state, dispatch] = useStateValue()
+    console.log(data);
 
-    const onAutoplayTimeLeft = (s, time, progress) => {
-      progressCircle.current.style.setProperty('--progress', 1 - progress);
-      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-    };
-    const {data, loading, error} = useFetch(`/products`)
     const products_data =  data?.map(pro => (
         <div className="products__box" key={pro.id}>
             <div className="products__box__image">
             <img src={pro.image} onClick={()=>SetModelContent(pro)}/>
-            <div className="icon">
-                <CiHeart />
+            <div className="icon" onClick={()=> dispatch({type: "ADD_WISHLIST", payload: pro})}>
+                {
+                    state.wishlist?.some(item => item.id === pro.id) 
+                    ?
+                    <FaHeart/>
+                    :
+                    <FaRegHeart/>
+                }
             </div>
         </div>
         <div className="products__box__text">
@@ -46,11 +48,10 @@ const Products = () => {
         </div>
     </div>
     ))
-    console.log(Model);
-
   return (
     <div className='container'>
-        <Title title="Популярные товары" text="Все товары →"/>
+        {!data && <Loader/>}
+        <Title title={text} text="Все товары →"/>
         <div className="products">
            {products_data}
         </div>
