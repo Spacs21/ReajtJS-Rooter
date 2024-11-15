@@ -11,7 +11,7 @@ import NotFound from '../not-found/NotFound'
 import Blogs from '../blogs/Blogs'
 import { memo } from 'react';
 import Detail from '../detail/Detail'
-import Wishlist from '../Wishlist/wishlist'
+import Wishlist from '../wishlist/Wishlist'
 
 const Router = () => {
   return (
