@@ -31,7 +31,7 @@ const Product = () => {
                     <div className="icons"><img src={icons}/></div>
                 </div>
                 <div className="detail__text__price">
-                    <h1>{data?.price}</h1>
+                    <h1>${data?.price}</h1>
                 </div>
                 <div className="descp">
                     <p>{data?.descp}</p>

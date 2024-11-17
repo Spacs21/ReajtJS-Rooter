@@ -12,6 +12,7 @@ import Blogs from '../blogs/Blogs'
 import { memo } from 'react';
 import Detail from '../detail/Detail'
 import Wishlist from '../wishlist/Wishlist'
+import Cart from '../cart/Cart'
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
         <Route path='/blog' element={<Blogs/>}/>
         <Route path='/product/:id' element={<Detail/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         </Route>
         <Route path='*' element={<NotFound/>}/>
   </Routes>

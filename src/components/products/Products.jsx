@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import "./Products.scss"
 import Title from '../title/Title'
 import { FaCartShopping } from "react-icons/fa6";
@@ -20,7 +20,6 @@ import Loader from '../loader/Loader';
 const Products = ({data, loading, error, text}) => {
     const [ModelContent, SetModelContent] = useState(null)
     const [state, dispatch] = useStateValue()
-    console.log(data);
 
     const products_data =  data?.map(pro => (
         <div className="products__box" key={pro.id}>
@@ -41,9 +40,9 @@ const Products = ({data, loading, error, text}) => {
             <div className="price">
             <p className='discount'>7 000₽</p>
                 <div className='amount'>
-                    <p>{pro.price}</p>
+                    <p>${pro.price}</p>
                 </div>
-                <div><button><FaCartShopping /></button></div>
+                <div><button onClick={()=> dispatch({type: "ADD_CART", payload: pro})}><FaCartShopping /></button></div>
             </div>
         </div>
     </div>
@@ -69,9 +68,8 @@ const Products = ({data, loading, error, text}) => {
                     pagination={{
                         clickable: true,
                     }}
-                    navigation={true}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    // onAutoplayTimeLeft={onAutoplayTimeLeft}
+                    navigation={false}
+                    modules={[Autoplay, Pagination]}
                     className="model__swiper"
                 >
                     <SwiperSlide><img src={ModelContent.image} alt="Model Content" /></SwiperSlide>

@@ -8,9 +8,13 @@ import logo from "../../assets/vector.png"
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Menu from '../menu/Menu';
 import { memo } from 'react';
+import { useStateValue } from '../../context';
 
 const Header = () => {
   const [isVisible, setVisible] = useState(false)
+  const [state, dispatch] = useStateValue()
+  console.log(state);
+  
 
   const toggleMenu = useMemo(() => () => {
     setVisible(prev => !prev)
@@ -61,16 +65,16 @@ const Header = () => {
               <div className="header__icons">
                 <div className="icon-wrapper">
                   <NavLink to={"/wishlist"}><AiOutlineHeart className="icon" /></NavLink>
-                  <span>Избранное</span>
+                  <span>Избранное</span>x
                 </div>
                 <div className="icon-wrapper special">
                   <AiOutlineBarChart className="icon" />
                   <span>Сравнение</span>
                 </div>
                 <div className="icon-wrapper cart">
-                  <BsCart className="icon" />
+                  <NavLink to={"/cart"}><BsCart className="icon" /></NavLink>
                   <span>Корзина</span>
-                  <span className="cart-badge">1</span>
+                  <span className="cart-badge">{state.cart.length}</span>
                 </div>
               </div>
             </div>
