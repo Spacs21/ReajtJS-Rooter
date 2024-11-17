@@ -79,7 +79,7 @@ const Cart = () => {
           <h2>Ваш заказ</h2>
           <div className="order-details">
             <div className="items-count">
-              Товары (3):
+              Товары ({state.cart.length}):
               <span>101 100 сум</span>
             </div>
             <div className="delivery-date">
