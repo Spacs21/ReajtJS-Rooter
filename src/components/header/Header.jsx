@@ -74,7 +74,7 @@ const Header = () => {
                 <div className="icon-wrapper cart">
                   <NavLink to={"/cart"}><BsCart className="icon" /></NavLink>
                   <span>Корзина</span>
-                  <span className="cart-badge">{state.cart.length}</span>
+                  {/* <span className="cart-badge">{state.cart.length}</span> */}
                 </div>
               </div>
             </div>
