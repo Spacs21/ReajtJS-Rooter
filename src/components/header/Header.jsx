@@ -63,9 +63,10 @@ const Header = () => {
               </div>
 
               <div className="header__icons">
-                <div className="icon-wrapper">
+                <div className="icon-wrapper cart">
                   <NavLink to={"/wishlist"}><AiOutlineHeart className="icon" /></NavLink>
                   <span>Избранное</span>
+                  <span className="cart-badge">{state.wishlist.length}</span>
                 </div>
                 <div className="icon-wrapper special">
                   <AiOutlineBarChart className="icon" />
@@ -74,7 +75,7 @@ const Header = () => {
                 <div className="icon-wrapper cart">
                   <NavLink to={"/cart"}><BsCart className="icon" /></NavLink>
                   <span>Корзина</span>
-                  {/* <span className="cart-badge">{state.cart.length}</span> */}
+                  <span className="cart-badge">{state.cart.length}</span>
                 </div>
               </div>
             </div>

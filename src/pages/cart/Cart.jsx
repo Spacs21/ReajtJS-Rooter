@@ -6,14 +6,14 @@ import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
     const [state, dispatch] = useStateValue()
-    // if(state.cart.length === 0){
-    //     return <div className='favorite'>
-    //     <img src="https://www.ipack.com/media/icons/empty-cart-ipack.png"/>
-    //     <h2>В корзине пока пусто</h2>
-    //     <p>Начните с главной страницы — нужный товар можно найти через поиск или заглянуть в подборки</p>
-    //     <NavLink to={"/"}><button>Главная</button></NavLink>
-    //   </div>
-    // }
+    if(state.cart.length === 0){
+        return <div className='favorite'>
+        <img src="https://www.ipack.com/media/icons/empty-cart-ipack.png"/>
+        <h2>В корзине пока пусто</h2>
+        <p>Начните с главной страницы — нужный товар можно найти через поиск или заглянуть в подборки</p>
+        <NavLink to={"/"}><button>Главная</button></NavLink>
+      </div>
+    }
     
 
   return (
@@ -95,7 +95,7 @@ const Cart = () => {
               Вы экономите: 12 600 сум
             </div>
           </div>
-          <button className="checkout-button" onClick={()=> dispatch({type: "CLEAR_CART"})}>
+          <button className="checkout-button">
             Перейти к оформлению
           </button>
         </div>
