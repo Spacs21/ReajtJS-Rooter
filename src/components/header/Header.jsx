@@ -65,7 +65,7 @@ const Header = () => {
               <div className="header__icons">
                 <div className="icon-wrapper">
                   <NavLink to={"/wishlist"}><AiOutlineHeart className="icon" /></NavLink>
-                  <span>Избранное</span>x
+                  <span>Избранное</span>
                 </div>
                 <div className="icon-wrapper special">
                   <AiOutlineBarChart className="icon" />
