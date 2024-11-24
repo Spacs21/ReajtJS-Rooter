@@ -3,27 +3,54 @@ import { FaBars, FaSearch, FaHeart, FaChartBar, FaShoppingCart } from 'react-ico
 import "./Header.scss"
 import { AiOutlineHeart, AiOutlineBarChart } from 'react-icons/ai';
 import { BsCart } from 'react-icons/bs';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from "../../assets/vector.png"
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Menu from '../menu/Menu';
 import { memo } from 'react';
 import { useStateValue } from '../../context';
+import axios from 'axios';
+import Model from '../model/Model';
 
 const Header = () => {
   const [isVisible, setVisible] = useState(false)
   const [state, dispatch] = useStateValue()
-  console.log(state);
-  
+  const [isModel, setModel] = useState(false)
 
   const toggleMenu = useMemo(() => () => {
     setVisible(prev => !prev)
   }, [])
 
+  const storageData = localStorage.getItem('storage');
+  const parsedData = JSON.parse(storageData)
+  const navigate = useNavigate()
+  const handleClear = ()=>{
+    localStorage.clear()
+    navigate("/login")
+  }
+
 
   return (
+    
     <div className="holder">
       <div className="container">
+          {
+            isModel && <Model visibleModel={setModel}>
+               <div className="modal">
+                <div className="modal__content">
+                  <div className="modal__user">
+                    <img 
+                      src={parsedData?.user} 
+                      className="modal__avatar"
+                    />
+                    <h3 className="modal__username">{parsedData?.name}</h3>
+                  </div>
+                  <p className="modal__text">выйти из аккаунта</p>
+                  <button className="modal__button" onClick={handleClear}>Выйти</button>
+                </div>
+               </div>
+            </Model>
+          }
           <header className="header">
             <div className="header__top-links">
               <div className="left">
@@ -63,14 +90,14 @@ const Header = () => {
               </div>
 
               <div className="header__icons">
+                <div className="icon-wrapper special" onClick={()=> setModel(prev => !prev)}>
+                  <img src={parsedData?.user} alt="" />
+                  <span>{parsedData?.name}</span>
+                </div>
                 <div className="icon-wrapper cart">
                   <NavLink to={"/wishlist"}><AiOutlineHeart className="icon" /></NavLink>
                   <span>Избранное</span>
                   <span className="cart-badge">{state.wishlist.length}</span>
-                </div>
-                <div className="icon-wrapper special">
-                  <AiOutlineBarChart className="icon" />
-                  <span>Сравнение</span>
                 </div>
                 <div className="icon-wrapper cart">
                   <NavLink to={"/cart"}><BsCart className="icon" /></NavLink>

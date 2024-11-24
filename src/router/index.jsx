@@ -13,12 +13,16 @@ import { memo } from 'react';
 import Detail from '../pages/detail/Detail'
 import Wishlist from '../pages/wishlist/Wishlist'
 import Cart from '../pages/cart/Cart'
+import Login from '../pages/login/Login'
+import Auth from '../pages/auth/Auth'
 
 const Router = () => {
   return (
     <Routes>
         <Route path='/' element={<Layout/>}>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Auth/>}>
+          <Route path='/' element={<Home/>}/>
+        </Route>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/return' element={<Return/>}/>
@@ -29,6 +33,10 @@ const Router = () => {
         <Route path='/wishlist' element={<Wishlist/>}/>
         <Route path='/cart' element={<Cart/>}/>
         </Route>
+        <Route path='/login' element={<Login/>}/>
+
+
+
         <Route path='*' element={<NotFound/>}/>
   </Routes>
   )

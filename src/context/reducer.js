@@ -1,6 +1,9 @@
 export const initialState = JSON.parse(localStorage.getItem("storage")) || {
     wishlist: [],
-    cart: [ ]
+    cart: [],
+    token: null,
+    user: null,
+    name: null
 }
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -48,7 +51,19 @@ export const reducer = (state, action)=> {
             result = {state, cart: []}
             localStorage.setItem("storage", JSON.stringify(result))
             return result
-        default:
+        case "ADD_TOKEN":
+            result = {...state, token: action.payload}
+            localStorage.setItem("storage", JSON.stringify(result))
+            return result
+            case "ADD_USER":
+                result = {...state, user: action.payload}
+                localStorage.setItem("storage", JSON.stringify(result))
+                return result
+            case "ADD_NAME":
+                result = {...state, name: action.payload}
+                localStorage.setItem("storage", JSON.stringify(result))
+                return result
+            default:
             return state
     }
 }

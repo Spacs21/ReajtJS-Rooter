@@ -94,3 +94,79 @@
         }
     }
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    &__content {
+      background-color: #ffffff91;
+      border-radius: 12px;
+      padding: 24px;
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    //   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    &__user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    &__avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+  
+    &__username {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333333;
+      margin: 0;
+    }
+  
+    &__text {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 24px;
+    }
+  
+    &__button {
+      background-color: #ff3b30;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 100%;
+  
+      &:hover {
+        background-color: #ff1f1f;
+      }
+  
+      &:active {
+        background-color: #e60000;
+      }
+    }
+  }
