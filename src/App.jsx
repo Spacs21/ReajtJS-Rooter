@@ -1,5 +1,5 @@
 import './App.scss'
-import Router from './pages/router'
+import Router from './router'
 
 function App() {
   return (
